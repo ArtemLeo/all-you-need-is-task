@@ -5,22 +5,45 @@ import java.util.Collections;
 
 public class Array_001_Reverse {
     public static void main(String[] args) {
-        int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-        System.out.println("Original = " + Arrays.toString(array));
+        int[] array1 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        System.out.println("Original = " + Arrays.toString(array1));
+        int[] reverseArrayWithFor = reverseArrayWithFor(array1);
+        System.out.println("ReverseArrayWithFor = " + Arrays.toString(reverseArrayWithFor));
+        System.out.println("-----------------------------------------");
 
-        int[] reverseArray = reverseMethod(array);
-        System.out.println("Reverse = " + Arrays.toString(reverseArray));
+        int[] array2 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        System.out.println("Original = " + Arrays.toString(array2));
+        int[] reverseArrayWithForEachAndThreeGlasses = reverseArrayWithForEachAndThreeGlasses(array2);
+        System.out.println("ReverseArrayWithForEachAndThreeGlasses = " + Arrays.toString(reverseArrayWithForEachAndThreeGlasses));
+        System.out.println("-----------------------------------------");
 
-        int[] reverseArrayWithCollectionReverse = reverseArrayWithCollectionReverse(array);
+        int[] array3 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        System.out.println("Original = " + Arrays.toString(array3));
+        int[] reverseArrayWithCollectionReverse = reverseArrayWithCollectionReverse(array3);
         System.out.println("ReverseArrayWithCollectionReverse = " + Arrays.toString(reverseArrayWithCollectionReverse));
+        System.out.println("-----------------------------------------");
     }
 
-    private static int[] reverseMethod(int[] arrayFirst) {
+    private static int[] reverseArrayWithFor(int[] arrayFirst) {
         int[] newArray = new int[arrayFirst.length];
         int count = 0;
         for (int i = arrayFirst.length - 1; i >= 0; i--) {
             newArray[count] = arrayFirst[i];
             count++;
+        }
+        return newArray;
+    }
+
+    private static int[] reverseArrayWithForEachAndThreeGlasses(int[] array) {
+        int[] newArray = new int[array.length];
+        int temp;
+        for (int i = 0; i < array.length / 2; i++) {
+            temp = array[i];
+            array[i] = array[array.length - 1 - i];
+            array[array.length - 1 - i] = temp;
+        }
+        for (int i = 0; i < array.length; i++) {
+            newArray[i] = array[i];
         }
         return newArray;
     }
@@ -31,9 +54,10 @@ public class Array_001_Reverse {
             boxedArray[i] = array[i];
         }
         Collections.reverse(Arrays.asList(boxedArray));
-        for (int i = 0; i < array.length; i++) {
-            array[i] = boxedArray[i];
+        int[] newArray = new int[boxedArray.length];
+        for (int i = 0; i < boxedArray.length; i++) {
+            newArray[i] = boxedArray[i];
         }
-        return array;
+        return newArray;
     }
 }

@@ -6,6 +6,7 @@ public class Array_002_Merge {
     public static void main(String[] args) {
         int[] firstArray = {1, 2, 3, 4, 5};
         int[] secondArray = {6, 7, 8, 9, 10};
+        System.out.println("Originals arrays = " + Arrays.toString(firstArray) + " and " + Arrays.toString(secondArray));
 
         int[] mergeArrayWithFor = mergeWithFor(firstArray, secondArray);
         System.out.println("MergeArrayWithFor = " + Arrays.toString(mergeArrayWithFor));
@@ -48,7 +49,7 @@ public class Array_002_Merge {
   Создает новый массив, копируя все элементы из массива arr1 и задавая новую длину, равную сумме длин обоих исходных массивов.
   Это дает нам начальную часть нового массива, которая содержит все элементы из arr1.
 
-  System.arraycopy(исходный_массив, начальный_индекс_исходного_массива, целевой_массив, начальный_индекс_целевого_массива, количество_элементов);
+  System.arraycopy -> (исходный массив, начальный индекс исходного массива, целевой массив, начальный индекс целевого массива, количество элементов);
   System.arraycopy(arr2, 0, merged, arr1.length, arr2.length);
   Используется для копирования элементов из массива arr2 в массив merged, начиная с индекса arr1.length.
   Это означает, что мы начнем копирование элементов из arr2 в конец массива merged, который уже содержит элементы из arr1.
