@@ -3,16 +3,16 @@ package arrays;
 import java.util.Arrays;
 import java.util.Random;
 
-public class Array_004_Max_3_Value {
+public class Array_004_Three_Max_Values {
     public static void main(String[] args) {
         int[] array = new int[10];
         fullArrayOfValues(array);
 
-        int[] max3ValueWithFor = find3MaxValueWithFor(array);
-        System.out.println(Arrays.toString(max3ValueWithFor));
+        int[] ThreeMaxValueWithFor = find3MaxValueWithFor(array);
+        System.out.println("ThreeMaxValueWithFor: " + Arrays.toString(ThreeMaxValueWithFor));
 
-        int[] max3ValueWithForEach = find3MaxValueWithForEach(array);
-        System.out.println(Arrays.toString(max3ValueWithForEach));
+        int[] ThreeMaxValueWithForEach = find3MaxValueWithForEach(array);
+        System.out.println("ThreeMaxValueWithForEach: " + Arrays.toString(ThreeMaxValueWithForEach));
     }
 
     private static int[] find3MaxValueWithForEach(int[] array) {
@@ -32,7 +32,7 @@ public class Array_004_Max_3_Value {
                 thirdMax = value;
             }
         }
-        return Arrays.copyOf(array,3);
+        return Arrays.copyOf(array, 3);
     }
 
     private static int[] find3MaxValueWithFor(int[] array) {
@@ -54,8 +54,8 @@ public class Array_004_Max_3_Value {
     private static void fullArrayOfValues(int[] array) {
         Random random = new Random();
         for (int i = 0; i < array.length; i++) {
-            array[i] = random.nextInt(0, 100);
+            array[i] = random.nextInt(100);
         }
-        System.out.println(Arrays.toString(array));
+        System.out.println("Random Array: " + Arrays.toString(array));
     }
 }
