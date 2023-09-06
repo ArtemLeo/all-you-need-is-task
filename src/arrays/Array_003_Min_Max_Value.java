@@ -1,6 +1,5 @@
 package arrays;
 
-
 import java.util.Arrays;
 
 public class Array_003_Min_Max_Value {
