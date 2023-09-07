@@ -3,6 +3,19 @@ package arrays;
 import java.util.Arrays;
 import java.util.Random;
 
+/*
+ * Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+ * Note that you must do this in-place without making a copy of the array.
+ *
+ * Example 1:
+ *     input: [0,10,0,0,12,0,15]
+ *     output: [10,12,15,0,0,0,0]
+ *
+ * Example 2:
+ *     input: [345,0,12,12,0,78,0]
+ *     output: [345,12,12,78,0,0,0]
+ */
+
 public class Array_007_MoveZeroesValuesToTheEnd {
     public static void main(String[] args) {
         int[] array = new int[10];

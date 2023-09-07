@@ -2,6 +2,19 @@ package arrays;
 
 import java.util.Arrays;
 
+/*
+ * You are given two integer arrays array1 and array2, the task is to merge array1 and array2 into a single array.
+ * The elements of the second array must come after all the elements of the first.
+ *
+ * Example 1:
+ *     input: array1 = [1,2,3,4,5] array2 = [34,8,12,17]
+ *     output: [1,2,3,4,5,34,8,12,17]
+ *
+ * Example 2:
+ *     input: array1 = [46,245,12,78956,234] array2 = [10,20,30,40]
+ *     output: [46,245,12,78956,234,10,20,30,40]
+ */
+
 public class Array_002_Merge {
     public static void main(String[] args) {
         int[] firstArray = {1, 2, 3, 4, 5};

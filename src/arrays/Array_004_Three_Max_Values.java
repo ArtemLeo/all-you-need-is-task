@@ -3,6 +3,23 @@ package arrays;
 import java.util.Arrays;
 import java.util.Random;
 
+/*
+ * Given an array with all distinct positive integers, find the largest three elements in the array.
+ *
+ * Example 1:
+ *     input: [10,1,27,99,123,19,20]
+ *     output: [123, 99, 27]
+ *
+ * Example 2:
+ *     input: [234,4,67,1,98,235,7,1020]
+ *     output [1020,235,234]
+ *
+ * If the number of elements in the input array is less than 3, just return it.
+ *
+ * Example with invalid input:
+ *     input: [17,23]
+ *     output [17,23]
+ */
 public class Array_004_Three_Max_Values {
     public static void main(String[] args) {
         int[] array = new int[10];

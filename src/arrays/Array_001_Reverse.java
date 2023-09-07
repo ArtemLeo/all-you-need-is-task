@@ -3,6 +3,18 @@ package arrays;
 import java.util.Arrays;
 import java.util.Collections;
 
+/*
+ * Given an array, the task is to reverse the given array.
+ *
+ * Example 1:
+ *     input : [1,2,3,4,5]
+ *     output: [5,4,3,2,1]
+ *
+ * Example 2:
+ *     input : [280,345,1,280,1]
+ *     output: [1,280,1,345,280]
+ */
+
 public class Array_001_Reverse {
     public static void main(String[] args) {
         int[] array1 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
