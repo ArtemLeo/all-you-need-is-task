@@ -3,7 +3,7 @@ package sorting;
 import java.util.Arrays;
 import java.util.Random;
 
-public class BubbleSort {
+public class Sorting_001_BubbleSort {
     public static void main(String[] args) {
         int[] array = new int[10];
         fillArray(array);
