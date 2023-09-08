@@ -34,7 +34,6 @@ public class Array_008_FindFinalOriginalValue {
 
         int finalOriginalValue = findFinalOriginalValue(array, original);
         System.out.println("FinalOriginalValue = " + finalOriginalValue);
-
     }
 
     private static int findFinalOriginalValue(int[] array, int original) {
