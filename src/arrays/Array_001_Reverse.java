@@ -36,34 +36,27 @@ public class Array_001_Reverse {
         System.out.println("-----------------------------------------");
     }
 
-    private static int[] reverseArrayWithFor(int[] arrayFirst) {
-        int[] newArray = new int[arrayFirst.length];
-        int count = 0;
-        for (int i = arrayFirst.length - 1; i >= 0; i--) {
-            newArray[count] = arrayFirst[i];
-            count++;
+    private static int[] reverseArrayWithFor(int[] array1) {
+        int[] newArray = new int[array1.length];
+        for (int i = 0; i < array1.length; i++) {
+            newArray[array1.length - i - 1] = array1[i];
         }
         return newArray;
     }
 
-    private static int[] reverseArrayWithForEachAndThreeGlasses(int[] array) {
-        int[] newArray = new int[array.length];
-        int temp;
-        for (int i = 0; i < array.length / 2; i++) {
-            temp = array[i];
-            array[i] = array[array.length - 1 - i];
-            array[array.length - 1 - i] = temp;
+    private static int[] reverseArrayWithForEachAndThreeGlasses(int[] array2) {
+        for (int i = 0; i < array2.length / 2; i++) {
+            int temp = array2[i];
+            array2[i] = array2[array2.length - 1 - i];
+            array2[array2.length - 1 - i] = temp;
         }
-        for (int i = 0; i < array.length; i++) {
-            newArray[i] = array[i];
-        }
-        return newArray;
+        return array2;
     }
 
-    private static int[] reverseArrayWithCollectionReverse(int[] array) {
-        Integer[] boxedArray = new Integer[array.length];
-        for (int i = 0; i < array.length; i++) {
-            boxedArray[i] = array[i];
+    private static int[] reverseArrayWithCollectionReverse(int[] array3) {
+        Integer[] boxedArray = new Integer[array3.length];
+        for (int i = 0; i < array3.length; i++) {
+            boxedArray[i] = array3[i];
         }
         Collections.reverse(Arrays.asList(boxedArray));
         int[] newArray = new int[boxedArray.length];
