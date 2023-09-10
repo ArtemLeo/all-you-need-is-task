@@ -8,12 +8,12 @@ import java.util.Random;
 
 public class Elementary_006_RandomWeekDay {
     public static void main(String[] args) {
-        int randomNumber = randomNumber();
-        displayDayOfTheWeek(randomNumber);
+        displayRandomDayOfTheWeek();
     }
 
-    private static void displayDayOfTheWeek(int randomNumber) {
-        switch (randomNumber) {
+    private static void displayRandomDayOfTheWeek() {
+        Random random = new Random();
+        switch (random.nextInt(8) + 1) {
             case 1 -> System.out.println("Monday");
             case 2 -> System.out.println("Tuesday");
             case 3 -> System.out.println("Wednesday");
@@ -23,10 +23,5 @@ public class Elementary_006_RandomWeekDay {
             case 7 -> System.out.println("Sunday");
             default -> System.out.println("Incorrect input! Please repeat ...");
         }
-    }
-
-    private static int randomNumber() {
-        Random random = new Random();
-        return random.nextInt(9);
     }
 }
